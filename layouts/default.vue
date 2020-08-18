@@ -2,7 +2,7 @@
   <div class="mb-20 sm:mb-0">
     <div class="flex flex-col items-center">
       <header
-        class="md:ml-12 flex flex-col items-center fixed top-0 text-xl tracking-widest bg-white opacity-75 border-b border-l border-r border-black rounded-br rounded-bl px-2 z-50"
+        class="md:ml-32 flex flex-col items-center fixed top-0 text-xl tracking-widest bg-white opacity-75 border-b border-l border-r border-black rounded-br rounded-bl px-2 z-50"
       >
         <nuxt-link to="/" class="handwriting">www.jackdishman.com</nuxt-link>
       </header>
@@ -19,6 +19,9 @@
         <div class="hidden sm:block">
           <nuxt-link to="/education" class="handwriting">Education</nuxt-link>
         </div>
+        <div class="hidden sm:block">
+          <nuxt-link to="/inquiry" class="handwriting">Need a Website?</nuxt-link>
+        </div>
       </article>
 
 
@@ -27,17 +30,18 @@
         <nuxt class="w-full md:w-2/3 opacity-50" />
       </div>
       <nuxt v-else class="w-full md:w-2/3" />
-      <nav class="fixed bottom-0 sm:hidden w-full" @click="toggleMobileNav()">
+      <nav class="fixed bottom-0 sm:hidden w-full">
           <!-- Mobile Nav is OPEN -->
-            <ul v-if="isMobileMenuOpen" class="border-t-2 border-blue-600 bg-blue-300 text-center h-48  text-3xl">
+            <ul v-if="isMobileMenuOpen" class="border-t-2 border-blue-600 bg-blue-300 text-center h-60  text-3xl" @click="toggleMobileNav()">
               <nuxt-link to="/work"><li class="h-16 align-middle py-2 handwriting">Work</li></nuxt-link>
               <nuxt-link to="/projects"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Projects</li></nuxt-link>
               <nuxt-link to="/education"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Education</li></nuxt-link>
+              <nuxt-link to="/inquiry"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Need a Website?</li></nuxt-link>
             </ul>
       
           <!-- Mobile Nav is CLOSED -->
-          <div v-else class="mb-5">
-            <button class="ml-5 p-2 border border-black rounded-full  bg-blue-300">
+          <div v-else class="mb-5 ml-5">
+            <button class="p-2 border border-black rounded-full  bg-blue-300" @click="toggleMobileNav()">
               <Compass class="w-12 h-12" />
             </button>
           </div>

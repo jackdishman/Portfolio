@@ -7,14 +7,14 @@
       <article>
         <img src="../static/images/me-1.png" class="max-h-screen" alt="Handsome picture of myself" />
       </article>
-
-      
     </section>
+
   </div>
 </template>
 
 <script>
 import Nametag from "~/components/Nametag";
+
 export default {
   components: {
     Nametag,

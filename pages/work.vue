@@ -1,7 +1,7 @@
 <template>
   <section class="p-5 mt-5">
     <article class="pb-3">
-      <h3 class="text-3xl handwriting tracking-wide text-center">Work Experience</h3>
+      <PageHeader title="Work Experience" />
     </article>
 
     <ContentCard
@@ -41,12 +41,14 @@
 <script>
 
 import ContentCard from '~/components/ContentCard';
+import PageHeader from '~/components/PageHeader';
 export default {
   data () { 
     return {
     }
   },
   components: {
+    PageHeader,
     ContentCard
   }
 };

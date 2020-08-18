@@ -1,7 +1,7 @@
 <template>
 
   <section class="p-5 mt-5">
-    <h3 class="text-3xl handwriting tracking-wide text-center">I graduated from ...</h3>
+    <PageHeader title="I graduated from ..." />
 
     <ContentCard 
       title="B.S. Computer Science & Mathematics"
@@ -19,10 +19,12 @@
 
 <script>
 import ContentCard from '~/components/ContentCard';
+import PageHeader from "~/components/PageHeader";
 
 export default {
   components: {
-    ContentCard
+    ContentCard,
+    PageHeader
   }
 };
 </script>
