@@ -10,6 +10,17 @@
     id="fsc-api"
     src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
     type="text/javascript"
-    data-storefront="jackdishman.test.onfastspring.com/popup-jackdishman">
+    data-storefront="jackdishman.test.onfastspring.com/popup-jackdishman"
+    data-continuous=true
+    data-popup-closed="onPopupClose"
+    >
+</script>
+
+<script>
+  function onPopupClose(data){
+    if(data !== null){
+      window.location.replace('https://fastspring.com');
+    }
+  }
 </script>
 </html>

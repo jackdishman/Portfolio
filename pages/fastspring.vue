@@ -6,31 +6,65 @@
         <PageHeader title="FastSpring Pop-up Storefront !!!" />
       </article>
 
-      <!-- This is the container for the Products Page -->
+      <!-- This is the Row container for the Products Page -->
       <article class="flex flex-row justify-around pt-10">
-        <!-- Product 1: Basic Website -->
-        <div class="flex flex-col justify-center w-32">
-          <h2 class="text-xl text-blue-500 text-center" data-fsc-item-path="basic-website" data-fsc-item-display></h2>
-          <img src="../assets/images/basic-website.png" alt="Logo of Basic Website" class="w-32 h-32">
-          <span data-fsc-item-path="basic-website" data-fsc-item-price class="text-center text-xl"></span>
-          <button data-fsc-item-path="basic-website" data-fsc-item-path-value="basic-website" data-fsc-action="Add, Checkout" class="border-2 rounded-full border-blue-900 bg-blue-500 px-2 block">
-            <span data-fsc-item-path="basic-website" data-fsc-item-description-action class="text-white spods">Buy Now</span>
-          </button>
+
+        <!-- Virtual Skateboard -->
+        <div class="w-64 bg-blue-300 border-2 border-blue-500 rounded flex flex-col">
+          <h3 class="text-center text-2xl">
+            <span data-fsc-item-path="virtual-skateboard" data-fsc-item-display></span>
+          </h3>
+          <img data-fsc-item-path="virtual-skateboard" data-fsc-item-image />
+          <h6 class="text-sm">Description Summary:</h6>
+          <span data-fsc-item-path="virtual-skateboard" data-fsc-item-description-summary></span>
+          <h4 class="bg-white text-center">Price: <span class="text-green-700 text-2xl" data-fsc-item-path="virtual-skateboard" data-fsc-item-price></span></h4>
+          <button class="bg-green-500 p-2 handwriting" data-fsc-item-path="virtual-skateboard" data-fsc-item-path-value="virtual-skateboard" data-fsc-action="Add" data-fsc-item-selection-smartdisplay-inverse>Add to Cart</button>
+          <button class="bg-red-500 p-2 handwriting" data-fsc-item-path="virtual-skateboard" data-fsc-item-path-value="virtual-skateboard" data-fsc-action="Remove" data-fsc-item-selection-smartdisplay>Remove from Cart</button>
         </div>
 
-        <!-- Product 2: Premium Website -->
-        <div class="flex flex-col justify-center w-32">
-          <h2 class="text-xl text-blue-500 text-center" data-fsc-item-path="premium-website" data-fsc-item-display></h2>
-          <img src="../assets/images/premium-website.png" alt="Logo of Premium Website" class="w-32 h-32">
-          <span data-fsc-item-path="premium-website" data-fsc-item-price class="text-center text-xl"></span>
-          <button data-fsc-item-path="premium-website" data-fsc-item-path-value="premium-website" data-fsc-action="Add, Checkout" class="border-2 rounded-full border-blue-900 bg-blue-500 px-2 block">
-            <span data-fsc-item-path="premium-website" data-fsc-item-description-action class="text-white spods">Buy Now</span>
-          </button>
+        <!-- Virtual Yoyo -->
+        <div class="w-64 bg-blue-300 border-2 border-blue-500 rounded flex flex-col">
+          <h3 class="text-center text-2xl">
+            <span data-fsc-item-path="virtual-yoyo" data-fsc-item-display></span>
+          </h3>
+          <img data-fsc-item-path="virtual-yoyo" data-fsc-item-image />
+          <h6 class="text-sm">Description Summary:</h6>
+          <span data-fsc-item-path="virtual-yoyo" data-fsc-item-description-summary></span>
+
+          <h4 class="bg-white text-center">
+            Price: <span class="text-green-700 text-xl" data-fsc-item-path="virtual-yoyo" data-fsc-item-price></span> 
+            x 
+            <span data-fsc-item-path="virtual-yoyo" data-fsc-item-quantity></span> 
+            =       
+            <span class="text-green-700 text-xl" data-fsc-item-path="virtual-yoyo" data-fsc-item-priceTotalValue></span>
+          </h4>
+
+          <div class="text-center">
+            Quantity:
+            <select v-model="qty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <button class="bg-green-500 p-2 handwriting" @click="addQty()">Update Quantity</button>
         </div>
 
+      
       </article>
 
+      <h2 class="text-3xl text-center">
+        Total:
+        <span data-fsc-order-total></span>
+      </h2>
+      <!-- Submit Button -->
+      <section>
+        <button class="border-2 border-blue-500 rounded-full px-2 bg-blue-100 mx-5" data-fsc-action="Reset">Reset</button>
+        <button class="border-2 border-green-500 rounded-full px-2 bg-green-100 mx-5" data-fsc-action="Checkout">Check Out</button>
+        <button class="border-2 border-blue-500 rounded-full px-2 bg-blue-100 mx-5" data-fsc-action="PaypalCheckout">Check out with PayPal</button>
 
+      </section>
 
     </section>
   </div>
@@ -41,9 +75,28 @@
 import PageHeader from "~/components/PageHeader";
 
 export default {
+  data: function () {
+    return {
+      qty: 0
+    }
+  },
   components: {
     PageHeader
   },
-
+  methods: {
+    addQty(){
+      fastspring.builder.update('virtual-yoyo',this.qty);
+    },
+    // addItem: function (item){
+    //   fastspring.builder.add(item, function(data){
+    //     console.log("added " + item + 'and it resulted in the following order object', data);
+    //   });
+    // },
+    // removeItem: function (item){
+    //   fastspring.builder.remove(item, function(data){
+    //     console.log("Removed " + item + 'and it resulted in the following order object', data);
+    //   });    
+    // },
+  },
 };
 </script>
