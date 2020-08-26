@@ -5,6 +5,14 @@
       <PageHeader title="Extole Implementation" />
     </article>
 
+    <article class="pb-5">
+      <h2 class="font-bold text-xl inline">Tagging Implementation:</h2>
+      <button class="border-2 border-blue-500 rounded-full px-2 bg-blue-200 font-bold">
+        <span id="extole_zone_global_header"></span>
+      </button>
+
+    </article>
+
     <article class="flex flex-col">
       <h2 class="text-2xl text-blue-500"> <span class="text-black font-bold text-xl">Step 1:</span> <span class="underline">Fill out User Info & Get token</span></h2>
       <div class="font-bold">
@@ -90,6 +98,9 @@ export default {
         this.shareLink = res.data;
       })
     }
-  }
+  },
+    mounted(){
+     /* Start Extole */ (function(c,e,k,l,a){c[e]=c[e]||{};for(c[e].q=c[e].q||[];a<l.length;)k(l[a++],c[e])})(window,"extole",function(c,e){e[c]=e[c]||function(){e.q.push([c,arguments])}},["createZone"],0); /* End Extole */ extole.createZone({ name: 'global_header', element_id: 'extole_zone_global_header' });
+  },
 }
 </script>
