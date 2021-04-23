@@ -8,7 +8,6 @@
       </header>
     </div>
     <section class="flex flex-row justify-between">
-
       <article class="md:mt-10 md:mt-5 md:ml-5">
         <div class="hidden sm:block">
           <nuxt-link to="/work" class="handwriting">Work</nuxt-link>
@@ -19,33 +18,47 @@
         <div class="hidden sm:block">
           <nuxt-link to="/education" class="handwriting">Education</nuxt-link>
         </div>
-        <div class="hidden sm:block">
-          <nuxt-link to="/inquiry" class="handwriting">Need a Website?</nuxt-link>
-        </div>
       </article>
 
-
-
-      <div v-if="isMobileMenuOpen"  @click="toggleMobileNav()">
+      <div v-if="isMobileMenuOpen" @click="toggleMobileNav()">
         <nuxt class="w-full md:w-2/3 opacity-50" />
       </div>
       <nuxt v-else class="w-full md:w-2/3" />
       <nav class="fixed bottom-0 sm:hidden w-full">
-          <!-- Mobile Nav is OPEN -->
-            <ul v-if="isMobileMenuOpen" class="border-t-2 border-blue-600 bg-blue-300 text-center h-60  text-3xl" @click="toggleMobileNav()">
-              <nuxt-link to="/work"><li class="h-16 align-middle py-2 handwriting">Work</li></nuxt-link>
-              <nuxt-link to="/projects"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Projects</li></nuxt-link>
-              <nuxt-link to="/education"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Education</li></nuxt-link>
-              <nuxt-link to="/inquiry"><li class="h-16 align-middle py-2 handwriting border-t border-blue-500">Need a Website?</li></nuxt-link>
-            </ul>
-      
-          <!-- Mobile Nav is CLOSED -->
-          <div v-else class="mb-5 ml-5">
-            <button class="p-2 border border-black rounded-full  bg-blue-300" @click="toggleMobileNav()">
-              <Compass class="w-12 h-12" />
-            </button>
-          </div>
-        
+        <!-- Mobile Nav is OPEN -->
+        <ul
+          v-if="isMobileMenuOpen"
+          class="border-t-2 border-blue-600 bg-blue-300 text-center h-60  text-3xl"
+          @click="toggleMobileNav()"
+        >
+          <nuxt-link to="/work"
+            ><li class="h-16 align-middle py-2 handwriting">Work</li></nuxt-link
+          >
+          <nuxt-link to="/projects"
+            ><li
+              class="h-16 align-middle py-2 handwriting border-t border-blue-500"
+            >
+              Projects
+            </li></nuxt-link
+          >
+          <nuxt-link to="/education"
+            ><li
+              class="h-16 align-middle py-2 handwriting border-t border-blue-500"
+            >
+              Education
+            </li></nuxt-link
+          >
+        </ul>
+
+        <!-- Mobile Nav is CLOSED -->
+        <div v-else class="mb-5 ml-5">
+          <button
+            class="p-2 border border-black rounded-full  bg-blue-300"
+            @click="toggleMobileNav()"
+          >
+            <Compass class="w-12 h-12" />
+          </button>
+        </div>
       </nav>
       <div class="hidden sm:block"></div>
     </section>

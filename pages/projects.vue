@@ -1,10 +1,18 @@
 <template>
-
   <section class="p-5 mt-5">
     <PageHeader title="Projects" />
-    <ContentCard 
-      title="SPODS"
+
+    <ContentCard
+      title="Decentralized Discourse"
       dateRange="In Development"
+      imgURL="capsule.png"
+      imgSize="large"
+      :bulletPoints="['Building a decenteralized social media']"
+    />
+
+    <ContentCard
+      title="SPODS"
+      dateRange="2020"
       imgURL="spods.png"
       :bulletPoints="[
         'Social Platform Organizational Domain System',
@@ -15,7 +23,11 @@
     />
 
     <article class="p-5 text-right sm:text-center">
-      <a class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500" href="https://www.spods.app/jackdishman">View my SPODS profile</a>
+      <a
+        class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
+        href="https://www.spods.app/jackdishman"
+        >View my SPODS profile</a
+      >
     </article>
 
     <ContentCard
@@ -27,30 +39,13 @@
       :bulletPoints="[
         'Developed an office navigation tool utilizing React/Redux to improve communication & collaboration alongside a team of seven interns.',
         'Organized tech timeline and delegated development tasks.'
-
       ]"
     />
-
-    <ContentCard 
-      title="Dishman Law"
-      dateRange="2015-Present"
-      imgURL="Dishman-Law.jpg"
-      secondImgURL="Dishman-Law-2.jpg"
-      :bulletPoints="[
-        'Developed, host and maintain the official website for Dishman Law',
-        'Perform Search Engine Optimizations, digital marketing campaigns using social media, and Google Business analytics'
-      ]"
-      imgSize="large"
-    />
-    <article class="p-5 text-right sm:text-center">
-      <a class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500" href="http://www.employment-labor-lawyer.com/">Visit Dishman Law</a>
-    </article>
-
   </section>
 </template>
 
 <script>
-import ContentCard from '~/components/ContentCard';
+import ContentCard from "~/components/ContentCard";
 import PageHeader from "~/components/PageHeader";
 
 export default {
