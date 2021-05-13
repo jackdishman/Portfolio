@@ -1,5 +1,5 @@
-<template>
-  <section class="p-5 mt-5">
+<template class="mb-20">
+  <section class="p-5 mt-5 mb-20 lg:mb-4">
     <PageHeader title="Projects" />
 
     <ContentCard

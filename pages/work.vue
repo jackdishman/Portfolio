@@ -1,5 +1,5 @@
 <template>
-  <section class="p-5 mt-5">
+  <section class="p-5 mt-5 mb-20 lg:mb-4">
     <article class="pb-3">
       <PageHeader title="Work Experience" />
     </article>

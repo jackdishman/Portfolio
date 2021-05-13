@@ -1,6 +1,5 @@
 <template>
-
-  <section class="p-5 mt-5">
+  <section class="p-5 mt-5 mb-20 lg:mb-4">
     <PageHeader title="I graduated from ..." />
 
     <ContentCard 
@@ -13,7 +12,6 @@
         'BroncoHack 2018'
       ]"
     />
-
   </section>
 </template>
 

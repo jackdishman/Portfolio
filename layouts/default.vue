@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-20 sm:mb-0 emoji-cursor">
+  <div class="sm:mb-0 emoji-cursor">
     <div class="flex flex-col items-center">
       <header
         class="md:ml-32 flex flex-col items-center fixed top-0 text-xl tracking-widest bg-white opacity-75 border-b border-l border-r border-black rounded-br rounded-bl px-2 z-50"

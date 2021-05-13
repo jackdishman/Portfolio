@@ -8,7 +8,6 @@
         <img src="../static/images/me.png" class="max-h-screen rounded-full" alt="Handsome picture of myself" />
       </article>
     </section>
-
   </div>
 </template>
 
