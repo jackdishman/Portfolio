@@ -3,12 +3,43 @@
     <PageHeader title="Projects" />
 
     <ContentCard
+      title="Web3ite"
+      dateRange="2021-present"
+      imgURL="nearnaut.jpeg"
+      :bulletPoints="[
+        'Vue 3 website deployed on IPFS node',
+        'View my wallets here'
+      ]"
+    />
+    <article class="p-5 text-right sm:text-center">
+      <a
+        class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
+        href="ipfs://bafybeihqpwraw7rylafdn2htzdwklhofinfbddvelka27zwnngfmbhg5f4/"
+        >View on IPFS</a
+      >
+    </article>
+    <article class="p-5 text-right sm:text-center">
+      <a
+        class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
+        href="https://github.com/jackdishman/jdish.eth"
+        >GitHub Repo</a
+      >
+    </article>
+
+    <ContentCard
       title="Decentralized Discourse"
-      dateRange="In Development"
+      dateRange="Pre-launch"
       imgURL="capsule.png"
       imgSize="large"
-      :bulletPoints="['Building a decenteralized social media']"
+      :bulletPoints="['Building a decenteralized discourse']"
     />
+    <article class="p-5 text-right sm:text-center">
+      <a
+        class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
+        href="https://www.capsule.social/about/team"
+        >Go to Capsule Social</a
+      >
+    </article>
 
     <ContentCard
       title="SPODS"
@@ -27,6 +58,13 @@
         class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
         href="https://www.spods.app/jackdishman"
         >View my SPODS profile</a
+      >
+    </article>
+    <article class="p-5 text-right sm:text-center">
+      <a
+        class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
+        href="https://github.com/jackdishman/Portfolio"
+        >GitHub Repo</a
       >
     </article>
 

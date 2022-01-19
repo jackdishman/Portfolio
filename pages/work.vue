@@ -14,8 +14,8 @@
     <article class="p-5 text-right sm:text-center">
       <a
         class="p-4 border-2 border-blue-500 bg-blue-300 rounded-full hover:bg-blue-500"
-        href="https://techcrunch.com/2021/03/09/capsule-gets-1-5m-to-build-super-simple-decentralized-social-media/"
-        >See TechCrunch Article</a
+        href="https://www.capsule.social/about/team"
+        >Go to Capsule Social</a
       >
     </article>
 
